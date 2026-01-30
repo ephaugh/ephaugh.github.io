@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everett Haugh - Full-Stack Developer & Technology Systems Lead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2d5077;
+            --accent: #d4a574;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #666666;
+            --bg-main: #fafaf8;
+            --bg-section: #ffffff;
+            --border: #e8e6e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 32px;
+            margin-bottom: 48px;
+            animation: slideDown 0.6s ease-out 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            margin-bottom: 16px;
+            letter-spacing: 0.01em;
+        }
+
+        .header-details {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .header-details span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        section {
+            margin-bottom: 52px;
+            animation: slideUp 0.6s ease-out both;
+        }
+
+        section:nth-child(2) { animation-delay: 0.3s; }
+        section:nth-child(3) { animation-delay: 0.4s; }
+        section:nth-child(4) { animation-delay: 0.5s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .experience-item {
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 28px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(30, 58, 95, 0.04);
+        }
+
+        .experience-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 16px rgba(30, 58, 95, 0.08);
+            transform: translateY(-2px);
+        }
+
+        h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            margin-bottom: 8px;
+        }
+
+        .job-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .experience-item p,
+        .experience-item ul {
+            color: var(--text-medium);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 12px;
+            padding-left: 16px;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .environment {
+            background: linear-gradient(135deg, #f8f6f2 0%, #f0ede6 100%);
+            padding: 14px 18px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: var(--text-medium);
+            margin-top: 20px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .environment strong {
+            color: var(--primary);
+        }
+
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .capability-item {
+            background: var(--bg-section);
+            padding: 20px 24px;
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(30, 58, 95, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .capability-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 3px 12px rgba(30, 58, 95, 0.08);
+        }
+
+        .summary-text {
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 32px;
+            line-height: 1.9;
+            color: var(--text-medium);
+            font-size: 1.05rem;
+            box-shadow: 0 2px 8px rgba(30, 58, 95, 0.04);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .experience-item {
+                padding: 24px;
+            }
+
+            .capabilities {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .experience-item,
+            .summary-text,
+            .capability-item {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            section {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Everett Haugh</h1>
+            <div class="subtitle">Full-Stack Developer & Technology Systems Lead</div>
+            <div class="header-details">
+                <span>📍 Washington, DC</span>
+                <span>🏢 American Campaign Tools LLC</span>
+                <span>✉️ everett@haughmail.com / everett@amcamtools.com</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary-text">
+                Full-stack developer and technology systems operator with 4+ years of hands-on experience designing, building, and operating secure platforms for policy-adjacent, nonprofit, and advocacy organizations. Proven ability to take systems from concept to production, having built and launched a mobile donor platform serving 500+ active users.
+                <br><br>
+                Previously served as Associate Director of Information Technology at The Federalist Society, supporting one of the most influential conservative legal organizations in the United States. Now operating as an independent contractor, providing full-stack development and systems expertise to advocacy organizations and nonprofits. Strong bias toward execution, maintainability, and ownership over advisory-only work. Specializes in member portals, event registration systems, payment integration, and CRM-backed workflows.
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Capabilities</h2>
+            <div class="capabilities">
+                <div class="capability-item">Authenticated member & donor platforms</div>
+                <div class="capability-item">Modern web applications (React.js, Next.js)</div>
+                <div class="capability-item">Mobile application development (Flutter)</div>
+                <div class="capability-item">Secure event registration & access control</div>
+                <div class="capability-item">Payment processing integration (Stripe)</div>
+                <div class="capability-item">Tailored CRM-backed workflows & data modeling</div>
+                <div class="capability-item">Identity & access management (SSO, RBAC)</div>
+                <div class="capability-item">Systems administration & platform operations</div>
+                <div class="capability-item">Incident response & security investigations</div>
+                <div class="capability-item">API-based integrations & automation</div>
+                <div class="capability-item">Platform migrations with minimal downtime</div>
+                <div class="capability-item">End-to-end technical ownership (solo operator)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            
+
+             <div class="experience-item">
+                <h3>American Campaign Tools LLC</h3>
+                <div class="job-title">Founder & Principal</div>
+                <div class="job-meta">2024 — Present</div>
+                
+                <p>Principal-led technology firm providing systems design, implementation, and operational support to advocacy organizations, trade associations, and nonprofits. Work ranges from straightforward informational sites to custom-built, production-grade web applications. Also provide ongoing support for system administration and incident response services.</p>
+                
+                <ul>
+                    <li>Designs and implements authenticated member platforms with gated content and role-based access.</li>
+                    <li>Builds secure event registration workflows integrated with backend data systems.</li>
+                    <li>Delivers platform audits, access reviews, and security hardening.</li>
+                    <li>Operates as a long-term technical partner responsible for delivery, maintenance, and system evolution.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>The Federalist Society</h3>
+                <div class="job-title">Associate Director of Information Technology</div>
+                <div class="job-meta">Washington, DC | 2022 — 2026</div>
+                
+                <p>Led technical operations and platform modernization for a national conservative legal organization supporting thousands of members, donors, and event participants.</p>
+                
+                <ul>
+                    <li>Designed and operated secure identity and access systems across cloud platforms, enforcing least-privilege and role-based permissions.</li>
+                    <li>Led modernization and ongoing operation of membership and CRM platforms supporting millions of records and complex access models.</li>
+                    <li>Served as technical lead for large-scale national conferences and regional events, supporting 4,000+ attendees with secure registration, badge printing, and on-site systems.</li>
+                    <li>Built and maintained automation for provisioning, access management, and operational workflows using PowerShell, JavaScript, and REST APIs.</li>
+                    <li>Developed custom integrations extending Salesforce/Fonteva functionality beyond out-of-the-box capabilities.</li>
+                    <li>Led incident response efforts, platform investigations, and security-related troubleshooting.</li>
+                    <li>Acted as the internal technical authority coordinating vendors, contractors, and executive stakeholders.</li>
+                </ul>
+                
+                <div class="environment">
+                    <strong>Environment:</strong> Salesforce, Fonteva, Microsoft 365, Entra ID, Google Workspace, PowerShell, JavaScript, REST APIs, cloud infrastructure
+                </div>
+            </div>
+
+
+            <div class="experience-item">
+                <h3>American Campaign Tools Inc.</h3>
+                <div class="job-title">Founder & CEO</div>
+                <div class="job-meta">2020 — 2022</div>
+                
+                <p>Designed, built, and launched ACTivate, a production mobile application serving as a donor engagement platform for advocacy organizations. Successfully piloted the platform with American Action for Breast Cancer Relief (AABR), supporting 500+ active users.</p>
+                
+                <p><strong>Technical Implementation:</strong></p>
+                <ul>
+                    <li>Built cross-platform mobile application using Flutter (Dart) for iOS and Android.</li>
+                    <li>Implemented Firebase backend including Authentication, Firestore database, and Cloud Functions.</li>
+                    <li>Integrated Stripe payment processing for donation workflows with real-time receipt generation.</li>
+                    <li>Deployed on AWS infrastructure with CloudFront CDN for optimized content delivery.</li>
+                    <li>Supported 500+ active donor users in production pilot deployment.</li>
+                </ul>
+
+                <p><strong>Key Features Delivered:</strong></p>
+                <ul>
+                    <li>Secure user authentication and profile management with email verification.</li>
+                    <li>Real-time donation processing with automated receipt generation and tax documentation.</li>
+                    <li>Event discovery and registration workflows with capacity management.</li>
+                    <li>Push notifications for campaign updates and donation confirmations.</li>
+                    <li>Role-based access control for organization admins vs. donors.</li>
+                    <li>Administrative dashboard for tracking donations, engagement metrics, and user analytics.</li>
+                </ul>
+                
+                <div class="environment">
+                    <strong>Environment:</strong> Flutter (Dart), Firebase (Auth, Firestore, Cloud Functions, Hosting), Stripe API, AWS (EC2, S3, CloudFront), RESTful APIs, Git/GitHub
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
