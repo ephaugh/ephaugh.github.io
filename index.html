@@ -1,419 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everett Haugh - Technology Delivery Lead</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1e3a5f;
-            --primary-light: #2d5077;
-            --accent: #d4a574;
-            --text-dark: #1a1a1a;
-            --text-medium: #4a4a4a;
-            --text-light: #666666;
-            --bg-main: #fafaf8;
-            --bg-section: #ffffff;
-            --border: #e8e6e1;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everett Haugh | Technology Delivery Lead</title>
+  <meta name="description" content="Full-stack engineer and solo practice principal who builds, deploys, and operates production platforms end to end for mission-driven organizations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    :root {
+      --ink: #1a1a2e;
+      --ink-secondary: #4a4a68;
+      --ink-light: #6b7280;
+      --accent: #2d5d7b;
+      --accent-light: #e8f0f6;
+      --bg: #ffffff;
+      --bg-subtle: #f7f9fb;
+      --rule: #d1d9e0;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'IBM Plex Mono', 'SF Mono', 'Fira Code', monospace;
+    }
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: var(--bg-main);
-            -webkit-font-smoothing: antialiased;
-        }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e4e4ed;
+        --ink-secondary: #a0a0b8;
+        --ink-light: #7a7a92;
+        --accent: #6aadcf;
+        --accent-light: #1c2a35;
+        --bg: #111118;
+        --bg-subtle: #18181f;
+        --rule: #2a2a3a;
+      }
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            animation: fadeIn 0.8s ease-out;
-        }
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-        header {
-            border-bottom: 3px solid var(--primary);
-            padding-bottom: 32px;
-            margin-bottom: 48px;
-            animation: slideDown 0.6s ease-out 0.2s both;
-        }
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    /* ---- HEADER ---- */
+    .header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2rem;
+    }
 
-        h1 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-            line-height: 1.1;
-        }
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
 
-        .subtitle {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--text-medium);
-            margin-bottom: 16px;
-            letter-spacing: 0.01em;
-        }
+    .header .subtitle {
+      font-size: 1.05rem;
+      color: var(--ink-secondary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
 
-        .header-details {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.25rem;
+      font-size: 0.875rem;
+      color: var(--ink-light);
+    }
 
-        .header-details span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+    .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-        section {
-            margin-bottom: 52px;
-            animation: slideUp 0.6s ease-out both;
-        }
+    .contact-row a:hover { text-decoration: underline; }
 
-        section:nth-child(2) { animation-delay: 0.3s; }
-        section:nth-child(3) { animation-delay: 0.4s; }
-        section:nth-child(4) { animation-delay: 0.5s; }
+    /* ---- SECTIONS ---- */
+    .section {
+      margin-bottom: 2.25rem;
+    }
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .section-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--accent);
+    }
 
-        h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 24px;
-            position: relative;
-            padding-bottom: 12px;
-        }
+    /* ---- SUMMARY ---- */
+    .summary p {
+      color: var(--ink-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--accent);
-        }
+    .summary p:last-child { margin-bottom: 0; }
 
-        .experience-item {
-            background: var(--bg-section);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 32px;
-            margin-bottom: 28px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(30, 58, 95, 0.04);
-        }
+    /* ---- SKILLS ---- */
+    .skills-grid {
+      display: grid;
+      gap: 0.85rem;
+    }
 
-        .experience-item:hover {
-            border-color: var(--accent);
-            box-shadow: 0 4px 16px rgba(30, 58, 95, 0.08);
-            transform: translateY(-2px);
-        }
+    .skill-row {
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
 
-        h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 6px;
-        }
+    .skill-row .skill-label {
+      font-weight: 600;
+      color: var(--ink);
+      display: inline;
+    }
 
-        .job-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-medium);
-            margin-bottom: 8px;
-        }
+    .skill-row .skill-label::after {
+      content: ": ";
+      font-weight: 400;
+      color: var(--ink-light);
+    }
 
-        .job-meta {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 20px;
-            font-style: italic;
-        }
+    .skill-row .skill-content {
+      color: var(--ink-secondary);
+      display: inline;
+    }
 
-        .experience-item p,
-        .experience-item ul {
-            color: var(--text-medium);
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
+    /* ---- EXPERIENCE ---- */
+    .role {
+      margin-bottom: 2rem;
+    }
 
-        ul {
-            padding-left: 20px;
-            list-style-type: none;
-        }
+    .role:last-child { margin-bottom: 0; }
 
-        li {
-            position: relative;
-            margin-bottom: 12px;
-            padding-left: 16px;
-        }
+    .role-header {
+      margin-bottom: 0.6rem;
+    }
 
-        li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 700;
-        }
+    .role-header h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
 
-        .environment {
-            background: linear-gradient(135deg, #f8f6f2 0%, #f0ede6 100%);
-            padding: 14px 18px;
-            border-radius: 6px;
-            font-size: 0.88rem;
-            color: var(--text-medium);
-            margin-top: 20px;
-            border-left: 3px solid var(--accent);
-        }
+    .role-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.15rem 0.75rem;
+      font-size: 0.875rem;
+      color: var(--ink-light);
+      margin-top: 0.15rem;
+    }
 
-        .environment strong {
-            color: var(--primary);
-        }
+    .role-meta .title-line {
+      font-weight: 500;
+      color: var(--ink-secondary);
+    }
 
-        .capabilities {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
-            margin-top: 20px;
-        }
+    .role-description {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      margin-bottom: 0.65rem;
+      font-style: italic;
+    }
 
-        .capability-item {
-            background: var(--bg-section);
-            padding: 20px 24px;
-            border-left: 3px solid var(--accent);
-            border-radius: 4px;
-            box-shadow: 0 2px 6px rgba(30, 58, 95, 0.04);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+    .engagement-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .capability-item:hover {
-            transform: translateX(4px);
-            box-shadow: 0 3px 12px rgba(30, 58, 95, 0.08);
-        }
+    .role ul {
+      padding-left: 1.15rem;
+    }
 
-        .summary-text {
-            background: var(--bg-section);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 32px;
-            line-height: 1.9;
-            color: var(--text-medium);
-            font-size: 1.05rem;
-            box-shadow: 0 2px 8px rgba(30, 58, 95, 0.04);
-        }
+    .role li {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      margin-bottom: 0.55rem;
+      line-height: 1.6;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 24px;
-            }
+    .role li:last-child { margin-bottom: 0; }
 
-            h1 {
-                font-size: 2.5rem;
-            }
+    .env-line {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      margin-top: 0.65rem;
+      font-family: var(--font-mono);
+    }
 
-            h2 {
-                font-size: 1.6rem;
-            }
+    /* ---- EDUCATION ---- */
+    .edu-entry h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
 
-            h3 {
-                font-size: 1.3rem;
-            }
+    .edu-entry .edu-meta {
+      font-size: 0.875rem;
+      color: var(--ink-light);
+    }
 
-            .experience-item {
-                padding: 24px;
-            }
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 560px) {
+      .page { padding: 2rem 1.15rem 3rem; }
+      .header h1 { font-size: 1.6rem; }
+    }
 
-            .capabilities {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media print {
-            body {
-                background: white;
-            }
-
-            .container {
-                max-width: 100%;
-                padding: 20px;
-            }
-
-            .experience-item,
-            .summary-text,
-            .capability-item {
-                page-break-inside: avoid;
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-
-            section {
-                animation: none;
-            }
-        }
-    </style>
+    @media print {
+      body { font-size: 11pt; }
+      .page { max-width: none; padding: 0; }
+      .section-title { color: #1a1a2e; border-bottom-color: #1a1a2e; }
+      a { color: inherit; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Everett Haugh</h1>
-            <div class="subtitle">Technology Delivery Lead  |  Full-Stack Developer & Systems Operator</div>
-            <div class="header-details">
-                <span>📍 Washington, DC</span>
-                <span>💼 American Campaign Tools LLC</span>
-                <span>✉️ everett@haughmail.com / everett@amcamtools.com</span>
-            </div>
-        </header>
+  <div class="page">
 
-        <section>
-            <h2>Professional Summary</h2>
-            <div class="summary-text">
-                Technology delivery lead with 8+ years across technology and delivery roles, taking systems from concept to production for mission-driven and member-based organizations. Owns the full lifecycle, from scoping ambiguous requirements through design, build, and production operation.
-                <br><br>
-                Translates business goals into working platforms spanning member portals, event systems, payment integration, and CRM-backed workflows. Delivers and operates the systems rather than advising from the sidelines, with a strong bias toward execution, maintainability, and long-term ownership. These platforms increasingly incorporate reusable AI build workflows that turn prototypes into production-ready, access-gated features.
-            </div>
-        </section>
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Everett Haugh</h1>
+      <div class="subtitle">Technology Delivery Lead · Full-Stack Developer & Systems Operator</div>
+      <div class="contact-row">
+        <span>Pennsylvania</span>
+        <span>American Campaign Tools LLC</span>
+        <a href="mailto:everett@amcamtools.com">everett@amcamtools.com</a>
+        <a href="https://amcamtools.com">amcamtools.com</a>
+      </div>
+    </header>
 
-        <section>
-            <h2>Skills & Capabilities</h2>
-            <div class="capabilities">
-                <div class="capability-item"><strong>Delivery:</strong> concept-to-production ownership, requirements translation, architecture tradeoffs, stakeholder and vendor coordination, platform migration</div>
-                <div class="capability-item"><strong>Build:</strong> JavaScript/TypeScript, React, Next.js, Flutter/Dart, PowerShell, REST APIs</div>
-                <div class="capability-item"><strong>Platforms:</strong> AWS, Azure, Vercel, Supabase, Firebase, Salesforce/Fonteva, Attio, Entra ID, Microsoft 365, Stripe</div>
-                <div class="capability-item"><strong>Domains:</strong> member & donor platforms, event registration & access control, payment processing, identity & access management / SSO, RBAC</div>
-            </div>
-        </section>
+    <!-- SUMMARY -->
+    <section class="section">
+      <div class="section-title">Summary</div>
+      <div class="summary">
+        <p>Full-stack engineer and solo practice principal who builds, deploys, and operates production platforms end to end for mission-driven organizations. In 2026, single-handedly architected and shipped the complete technical core for a national policy organization's flagship Washington, D.C. summit: a Next.js application over an 18-table Postgres schema, serving real attendees against a hard event date, covering every role from business development through production operations.</p>
+        <p>Delivers working systems with security and data governance built in from day one, not added after the fact. Runs an AI-augmented development practice with guardrails: agentic coding sessions against local production replicas, with a standing rule that no AI output is trusted until independently verified against the live system.</p>
+      </div>
+    </section>
 
-        <section>
-            <h2>Professional Experience</h2>
+    <!-- SKILLS -->
+    <section class="section">
+      <div class="section-title">Skills & Capabilities</div>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Delivery</span>
+          <span class="skill-content">Full-lifecycle ownership from sales and scoping through architecture, build, production operation, and ongoing support. Written decision records, consent-gated billing, documented scope swaps, schedule impacts flagged in writing the day they occur.</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Build</span>
+          <span class="skill-content">JavaScript/TypeScript, React, Next.js, Node.js, WordPress/PHP, Python, Flutter/Dart, PowerShell. REST API integration (Attio, Mailchimp, Stripe, Gmail SMTP).</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Platforms</span>
+          <span class="skill-content">Supabase/Postgres (RLS, schema design, migrations), Netlify, AWS, Azure, Firebase, Salesforce/Fonteva, Attio, Microsoft 365, Entra ID.</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI-Augmented Development</span>
+          <span class="skill-content">Claude Code with MCP server integration, structured agentic coding workflows, local production replicas for AI-safe development, independent verification discipline against live systems.</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Security & Governance</span>
+          <span class="skill-content">Server-side PII gating, row-level security, structural data anonymization, least-privilege API keys, schema freeze with written change control, fail-closed kill switches, immovable rollback tags.</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Domains</span>
+          <span class="skill-content">Member and donor platforms, event registration and access control, payment processing, identity and access management / SSO, CRM integration, advocacy and nonprofit technology.</span>
+        </div>
+      </div>
+    </section>
 
+    <!-- EXPERIENCE -->
+    <section class="section">
+      <div class="section-title">Professional Experience</div>
 
-             <div class="experience-item">
-                <h3>American Campaign Tools LLC</h3>
-                <div class="job-title">Founder & Principal</div>
-                <div class="job-meta">2026 – Present</div>
+      <!-- ACT LLC -->
+      <div class="role">
+        <div class="role-header">
+          <h3>American Campaign Tools LLC</h3>
+          <div class="role-meta">
+            <span class="title-line">Founder & Principal</span>
+            <span>2026 – Present</span>
+          </div>
+        </div>
+        <div class="role-description">
+          Solo technology practice serving advocacy organizations, trade associations, and nonprofits. Every engagement is principal-led: one person covering business development, architecture, delivery, and production operations.
+        </div>
 
-                <p>Delivery-led technology practice that takes custom platforms from concept to production for trade associations and nonprofits, then operates them as a long-term technical partner.</p>
+        <div class="engagement-label">Flagship: National Industrial-Policy Organization · 3 Phases, 2026</div>
+        <ul>
+          <li>Architected, built, and operate the full event-technology platform for the client's flagship Washington, D.C. policy summit: a Next.js/Netlify application spanning public site, registration, and staff backend, over a dedicated 18-table Supabase/Postgres schema with row-level security and server-side PII gating.</li>
+          <li>Designed and shipped a complete staff CMS covering attendees, a ~750-entry moderated registration waitlist with approval actions, editors for sessions, speakers, sponsors, and site content, CSV exports, and a control room with fail-closed kill switches.</li>
+          <li>Re-architected the registration model in under 48 hours after a late client pivot, from member self-registration with paid tickets to a free public waitlist with manual staff approval; preserved withdrawn capabilities (JWT auth, Stripe checkout) dormant-in-place so any reversal requires configuration, not a rebuild.</li>
+          <li>Built cross-domain JWT single sign-on bridging a WordPress/MemberPress membership platform to the separate Next.js application, with corporate parent-account resolution and role-scoped staff console access.</li>
+          <li>Delivered a confidential talent marketplace on a reusable three-layer content architecture, with structural anonymization ensuring real names and contact details never reach the presentation layer.</li>
+          <li>Implemented transactional email, sponsor allocation, and an idempotent queue-based one-way CRM sync into the client's Attio workspace, the first automated write permitted into that system, gated behind a five-record pilot protocol.</li>
+          <li>Pioneered an AI-assisted development workflow: full local production replica exposed to Claude Code via an MCP server, enabling feature cycles measured in hours. Standing verification rule: every AI session output is independently checked against the live database before promotion to production.</li>
+          <li>Converted a fixed-fee foundation engagement into a priority retainer at materially higher tiered rates, signed within 10 days of the prior phase closing. Three consecutive phases, each larger than the last, all converted on the strength of delivery.</li>
+        </ul>
+        <div class="env-line">Next.js · React · Supabase/Postgres · Netlify · WordPress/MemberPress · PHP · Stripe · Attio API · Mailchimp API · Gmail SMTP · Claude Code / MCP</div>
+      </div>
 
-                <ul>
-                    <li>Leads end-to-end delivery of custom platforms for trade associations and nonprofits, from discovery and scoping through architecture, build, launch, and ongoing operation as a long-term technical partner.</li>
-                    <li>Delivered a fixed-fee member-platform engagement for a 100-company industry organization: a hybrid web architecture with an authenticated member portal, a Supabase-backed event registration hub, Stripe payment processing, and Attio CRM integration. Completed on schedule to client satisfaction.</li>
-                    <li>Re-engaged by the same client for a follow-on build: converted developer-dependent web content into a self-service system, architecting a reusable three-layer foundation (structured content, branded presentation, delegated access-gating) rather than a one-off tool. Codified the build into a repeatable AI workflow that turns the client's prototypes into production-ready, access-gated features.</li>
-                </ul>
-            </div>
+      <!-- Fed Soc -->
+      <div class="role">
+        <div class="role-header">
+          <h3>The Federalist Society</h3>
+          <div class="role-meta">
+            <span class="title-line">Associate Director of Information Technology</span>
+            <span>Washington, DC</span>
+            <span>2021 – 2026</span>
+          </div>
+        </div>
+        <ul>
+          <li>Led modernization and ongoing operation of membership and CRM platforms running on millions of records and complex access models.</li>
+          <li>Served as technical lead for large-scale national conferences and regional events, delivering secure registration, badge printing, and on-site systems for 4,000+ attendees.</li>
+          <li>Designed and operated identity and access systems across cloud platforms, enforcing least-privilege and role-based permissions.</li>
+          <li>Built automation for provisioning, access management, and operational workflows using PowerShell, JavaScript, and REST APIs.</li>
+          <li>Delivered custom integrations extending Salesforce/Fonteva functionality beyond out-of-the-box capabilities.</li>
+          <li>Led incident response efforts, platform investigations, and security-related troubleshooting.</li>
+          <li>Acted as the internal technical authority, coordinating vendors, contractors, and executive stakeholders.</li>
+        </ul>
+        <div class="env-line">Salesforce · Fonteva · Microsoft 365 · Entra ID · Google Workspace · PowerShell · JavaScript · REST APIs</div>
+      </div>
 
-            <div class="experience-item">
-                <h3>The Federalist Society</h3>
-                <div class="job-title">Associate Director of Information Technology</div>
-                <div class="job-meta">Washington, DC | 2021 – 2026</div>
+      <!-- ACT Inc -->
+      <div class="role">
+        <div class="role-header">
+          <h3>American Campaign Tools Inc.</h3>
+          <div class="role-meta">
+            <span class="title-line">Founder & CEO</span>
+            <span>2020 – 2022</span>
+          </div>
+        </div>
+        <div class="role-description">
+          Took ACTivate, a donor engagement mobile platform, from concept to production solo, then piloted it to 500+ active users with a nonprofit serving intellectually disabled adults.
+        </div>
+        <ul>
+          <li>Built a cross-platform mobile application (Flutter/Dart) with Firebase backend (Auth, Firestore, Cloud Functions) and Stripe payment processing for real-time donation workflows.</li>
+          <li>Deployed on AWS infrastructure with CloudFront CDN, supporting 500+ active donor users in production. Delivered authentication, automated receipt generation, event registration, push notifications, and role-based admin dashboards.</li>
+        </ul>
+        <div class="env-line">Flutter/Dart · Firebase · Stripe · AWS (EC2, S3, CloudFront) · REST APIs</div>
+      </div>
+    </section>
 
-                <p>Owned technical delivery and platform modernization for a national membership organization supporting thousands of members, donors, and event participants.</p>
+    <!-- EDUCATION -->
+    <section class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-entry">
+        <h3>B.A., Political Science</h3>
+        <div class="edu-meta">Furman University · 2018</div>
+      </div>
+    </section>
 
-                <ul>
-                    <li>Led modernization and ongoing operation of membership and CRM platforms running on millions of records and complex access models.</li>
-                    <li>Served as technical lead for large-scale national conferences and regional events, delivering secure registration, badge printing, and on-site systems for 4,000+ attendees.</li>
-                    <li>Designed and operated secure identity and access systems across cloud platforms, enforcing least-privilege and role-based permissions.</li>
-                    <li>Built and maintained automation for provisioning, access management, and operational workflows using PowerShell, JavaScript, and REST APIs.</li>
-                    <li>Delivered custom integrations extending Salesforce/Fonteva functionality beyond out-of-the-box capabilities.</li>
-                    <li>Led incident response efforts, platform investigations, and security-related troubleshooting.</li>
-                    <li>Acted as the internal technical authority, coordinating vendors, contractors, and executive stakeholders.</li>
-                </ul>
-
-                <div class="environment">
-                    <strong>Environment:</strong> Salesforce, Fonteva, Microsoft 365, Entra ID, Google Workspace, PowerShell, JavaScript, REST APIs, cloud infrastructure
-                </div>
-            </div>
-
-
-            <div class="experience-item">
-                <h3>American Campaign Tools Inc.</h3>
-                <div class="job-title">Founder & CEO</div>
-                <div class="job-meta">2020 – 2022</div>
-
-                <p>Took ACTivate, a donor engagement mobile platform, from concept to production solo, then piloted it to 500+ active users with a Queens-based nonprofit which serves intellectually disabled adults.</p>
-
-                <p><strong>Technical Implementation:</strong></p>
-                <ul>
-                    <li>Built a cross-platform mobile application using Flutter (Dart) for iOS and Android.</li>
-                    <li>Implemented a Firebase backend including Authentication, Firestore database, and Cloud Functions.</li>
-                    <li>Integrated Stripe payment processing for donation workflows with real-time receipt generation.</li>
-                    <li>Deployed on AWS infrastructure with CloudFront CDN for optimized content delivery.</li>
-                    <li>Supported 500+ active donor users in production pilot deployment.</li>
-                </ul>
-
-                <p><strong>Key Features Delivered:</strong></p>
-                <ul>
-                    <li>Secure user authentication and profile management with email verification.</li>
-                    <li>Real-time donation processing with automated receipt generation and tax documentation.</li>
-                    <li>Event discovery and registration workflows with capacity management.</li>
-                    <li>Push notifications for campaign updates and donation confirmations.</li>
-                    <li>Role-based access control for organization admins vs. donors.</li>
-                    <li>Administrative dashboard for tracking donations, engagement metrics, and user analytics.</li>
-                </ul>
-
-                <div class="environment">
-                    <strong>Environment:</strong> Flutter (Dart), Firebase (Auth, Firestore, Cloud Functions, Hosting), Stripe API, AWS (EC2, S3, CloudFront), RESTful APIs, Git/GitHub
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <div class="experience-item">
-                <h3>B.A., Political Science</h3>
-                <div class="job-title">Furman University</div>
-                <div class="job-meta">2018</div>
-            </div>
-        </section>
-    </div>
+  </div>
 </body>
 </html>
